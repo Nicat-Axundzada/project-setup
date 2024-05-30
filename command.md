@@ -5,3 +5,5 @@ docker-compose up --build
 docker-compose up -d --build
 docker-compose run --rm app sh -c 'python manage.py startapp utils'
 docker-compose run --rm app sh -c 'python manage.py wait_for_db'
+docker-compose -f docker-compose-deploy.yml down
+docker-compose -f docker-compose-deploy.yml up
