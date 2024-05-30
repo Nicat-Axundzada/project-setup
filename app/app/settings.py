@@ -34,6 +34,9 @@ ALLOWED_HOSTS.extend(
     )
 )
 
+LOCAL_APPS = [
+
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Our apps
     'utils.apps.UtilsConfig',
+    *LOCAL_APPS,
     # Third-party apps
     'rest_framework',
     'drf_spectacular',
